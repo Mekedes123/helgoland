@@ -54,7 +54,7 @@ export class TrajectoriesSelectionComponent implements OnInit {
     }
   ];
 
-  @ViewChild('tabset')
+  @ViewChild('tabset', { static: true })
   public tabset: NgbTabset;
 
   public paramFilter: ParameterFilter;

@@ -43,7 +43,7 @@ export class TrajectoriesViewComponent implements OnInit {
 
     public tempColor: string;
 
-    @ViewChild('modalTrajectoryOptionsEditor')
+    @ViewChild('modalTrajectoryOptionsEditor', { static: true })
     public modalTrajectoryOptionsEditor: TemplateRef<any>;
 
     public graphOptions: D3GraphOptions = {

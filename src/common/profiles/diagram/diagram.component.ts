@@ -1,11 +1,11 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { TimedDatasetOptions } from '@helgoland/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { ProfilesCombiService } from './../combi-view/combi-view.service';
 import { ProfilesService } from './../services/profiles.service';
 import { ProfilesDiagramPermalink } from './diagram-permalink.service';
-import { TimedDatasetOptions } from '@helgoland/core';
 
 @Component({
     selector: 'n52-diagram',
@@ -14,10 +14,10 @@ import { TimedDatasetOptions } from '@helgoland/core';
 })
 export class ProfilesDiagramComponent implements OnInit {
 
-    @ViewChild('modalProfileOptionsEditor')
+    @ViewChild('modalProfileOptionsEditor', { static: true })
     public modalProfileOptionsEditor: TemplateRef<any>;
 
-    @ViewChild('modalGeometryViewer')
+    @ViewChild('modalGeometryViewer', { static: true })
     public modalGeometryViewer: TemplateRef<any>;
 
     public geometry: GeoJSON.GeoJsonObject;

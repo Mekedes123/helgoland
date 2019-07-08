@@ -1,5 +1,5 @@
-import fs = require('fs');
 import { combineLatest, Observable } from 'rxjs';
+const fs = require('fs');
 
 const exec = require('child_process').exec;
 
